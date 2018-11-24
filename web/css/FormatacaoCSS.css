@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;  	
+    padding: 0;
+    text-align: center;
+    background-color: #E9E9E9;
+}
+
+
+.barraMenu{
+    width: 100%;
+    background-image: linear-gradient(to right, #00975C, #008752);
+}
+
+.tituloFont{
+    color: white;
+    font-size: 17pt;
+    font-weight: 400;
+    font-family: calibri, sans-serif;
+}
+
+.tituloForm{
+    border-radius: 50px;
+    background-color: #FF7407;
+    margin: 5px;
+    padding: 10px;
+}
+
+.fichaFont{
+    color: white;
+    font-size: 17pt;
+    font-weight: 400;
+    font-family: calibri, sans-serif;
+}
+
+.fichaForm{
+    border-style: solid;
+    border-width: 100px;
+    border-radius: 50px;
+    border-color: #00975C;
+    margin: 5px;
+}

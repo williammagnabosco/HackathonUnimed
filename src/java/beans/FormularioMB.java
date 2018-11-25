@@ -22,7 +22,9 @@ public class FormularioMB {
     }
     
     public String salvar(){
-        
+        System.out.println("a");
+        System.out.println(formulario.getComplicacaoViaAerea());
+        System.out.println("b");
         IFormularioDAO formularioDAO = new FormularioDAO();
         formularioDAO.salvarFormulario(formulario);
         return "index";

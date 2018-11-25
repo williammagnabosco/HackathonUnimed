@@ -6,6 +6,8 @@ package modelo;
  */
 public class Formulario {
     
+    //Modelagem horrível e que têm o único propósito de possibilitar um protótipo funcional, possível de ser apresentado.
+    
     private int id;
     private String confirmouIdentidade;
     private String sitioDemarcado;

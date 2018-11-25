@@ -47,7 +47,7 @@
                                                   styleClass="fichaFont"
                                                   columns="2">
                                     <f:selectItem itemLabel=" Não" 
-                                                  itemValue="Não" />
+                                                  itemValue="Não"/>
                                     <f:selectItem itemLabel=" Sim" 
                                                   itemValue="Sim" />
                                 </p:selectOneRadio>
@@ -345,6 +345,9 @@
                 <p:commandButton value=">>" 
                                  styleClass="botaoLaranja"
                                  onclick="PF('ConfirmacaoDialog').show();"/>
+                <p:commandButton value="A" 
+                                 styleClass="botaoLaranja"
+                                 update="@(.ui-dialog)"/>
 
             </div>
 
@@ -354,6 +357,309 @@
                       showEffect="fade" 
                       hideEffect="fade" 
                       resizable="false">
+
+                <!-- Conteúdo Tela -->
+                <div style="width: 100%; background-color: white; margin: 10px 0; display: flex; flex-direction: row; justify-content: center;">
+
+                    <!-- Conteúdo Fomulário -->
+                    <div style="width: 400px; margin: 10px;">
+                        <center>
+                            <div style="margin: 20px 0;">
+                                <h:outputText value="Antes da Indução Anestésica"
+                                              styleClass="tituloFont"/>
+                            </div>
+                            <div style=" margin: 10px 0;">
+                                <h:outputText value="O paciente confirmou a sua identidade, o
+                                              local, o procedimento e seu consentimento?"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>
+                                <br/>
+                                <p:selectOneRadio value="#{formularioMB.formulario.confirmouIdentidade}" 
+                                                  styleClass="fichaFont"
+                                                  columns="2">
+                                    <f:selectItem itemLabel=" Não" 
+                                                  itemValue="Não" />
+                                    <f:selectItem itemLabel=" Sim" 
+                                                  itemValue="Sim" />
+                                </p:selectOneRadio>
+
+                                <h:outputText value="O sítio está demarcado?"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>                        
+                                <br/>
+                                <p:selectOneRadio value="#{formularioMB.formulario.sitioDemarcado}" 
+                                                  styleClass="fichaFont"
+                                                  columns="2">
+                                    <f:selectItem itemLabel=" Sim" 
+                                                  itemValue="Sim" />
+                                    <f:selectItem itemLabel=" Não se aplica" 
+                                                  itemValue="Não" />
+                                </p:selectOneRadio>
+
+                                <h:outputText value="Foi concluída a verificação do equipamento de anestesiologia e da medicação?"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>                        
+                                <br/>
+                                <p:selectOneRadio value="#{formularioMB.formulario.verificacaoEquipamentoAnestEMed}" 
+                                                  styleClass="fichaFont"
+                                                  columns="2">
+                                    <f:selectItem itemLabel=" Não" 
+                                                  itemValue="Não" />
+                                    <f:selectItem itemLabel=" Sim" 
+                                                  itemValue="Sim" />
+                                </p:selectOneRadio>
+
+                                <h:outputText value="O oxímetro de pulso está aplicado no paciente e funcionando corretamente?"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>                        
+                                <br/>
+
+                                <p:selectOneRadio value="#{formularioMB.formulario.oximetroFuncionando}" 
+                                                  styleClass="fichaFont"
+                                                  columns="2">
+                                    <f:selectItem itemLabel=" Não" 
+                                                  itemValue="Não" />
+                                    <f:selectItem itemLabel=" Sim" 
+                                                  itemValue="Sim" />
+                                </p:selectOneRadio>
+
+                                <h:outputText value="O paciente possui:"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>
+                                <br/>
+                                <h:outputText value="Alergia conhecida?"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>                        
+                                <br/>
+                                <p:selectOneRadio value="#{formularioMB.formulario.alergiaConhecida}" 
+                                                  styleClass="fichaFont"
+                                                  columns="2">
+                                    <f:selectItem itemLabel=" Não" 
+                                                  itemValue="Não" />
+                                    <f:selectItem itemLabel=" Sim" 
+                                                  itemValue="Sim" />
+                                </p:selectOneRadio>
+                                <br/>
+                                <h:outputText value="Complicações nas vias aéreas ou risco de aspiração?"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>                        
+                                <br/>
+                                <p:selectOneRadio value="#{formularioMB.formulario.complicacaoViaAerea}" 
+                                                  styleClass="fichaFont"
+                                                  columns="2">
+                                    <f:selectItem itemLabel=" Não" 
+                                                  itemValue="Não" />
+                                    <f:selectItem itemLabel=" Sim, e equipamentos/assistência disponíveis" 
+                                                  itemValue="Sim" />
+                                </p:selectOneRadio>
+                                <br/>
+                                <h:outputText value="Risco de perda sanguínea > 50 mL (7 mL/kg em criaças)?"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>                        
+                                <br/>
+                                <p:selectOneRadio value="#{formularioMB.formulario.riscoPerdaSanguinea}" 
+                                                  styleClass="fichaFont"
+                                                  style="width: 200px;"
+                                                  layout="grid" 
+                                                  columns="1">
+                                    <f:selectItem itemLabel=" Não" 
+                                                  itemValue="Não" />
+                                    <f:selectItem itemLabel=" Sim, e 2 acessos IV periféricos ou 1 cateter venoso central e fluidos previstos" 
+                                                  itemValue="Sim"/>
+                                </p:selectOneRadio>
+
+                            </div>
+                        </center>
+                    </div>
+
+                    <!-- Conteúdo Fomulário -->
+                    <div style="width: 400px; margin: 10px;">
+                        <center>
+                            <div style="margin: 20px 0;">
+                                <h:outputText value="Antes da Incisão Cirurgica"
+                                              styleClass="tituloFont"/>
+                            </div>
+                            <div style=" margin: 10px 0;">
+                                    <h:outputText value="Confirmar que todos os membros se apresentaram, indicando seu nome e sua função."
+                                                  styleClass="fichaFont"
+                                                  style="font-weight: bold;"/>                        
+                                    <br/>
+                                    <p:selectOneRadio value="#{formularioMB.formulario.membrosSeAPresentaram}" 
+                                                      styleClass="fichaFont"
+                                                      columns="2">
+                                        <f:selectItem itemLabel=" Não" 
+                                                      itemValue="Não" />
+                                        <f:selectItem itemLabel=" Sim" 
+                                                      itemValue="Sim" />
+                                    </p:selectOneRadio>
+
+                                    <h:outputText value="Confirmar o nome do paciente o procedimento cirúrgico e onde será realizada a incisão."
+                                                  styleClass="fichaFont"
+                                                  style="font-weight: bold;"/>                        
+                                    <br/>
+
+                                    <p:selectOneRadio value="#{formularioMB.formulario.confirmouNomeProcedimentoELocal}" 
+                                                      styleClass="fichaFont"
+                                                      columns="2">
+                                        <f:selectItem itemLabel=" Confirmado" 
+                                                      itemValue="Confirmado" />
+                                        <f:selectItem itemLabel=" Não confirmado" 
+                                                      itemValue="NaoConfirmado" />
+                                    </p:selectOneRadio>
+
+                                    <h:outputText value="A profilaxia antibiótica foi administrada nos últimos 60 minutos?"
+                                                  styleClass="fichaFont"
+                                                  style="font-weight: bold;"/>                        
+                                    <br/>
+                                    <p:selectOneRadio value="#{formularioMB.formulario.profilaxiaAntibiotica}" 
+                                                      styleClass="fichaFont"
+                                                      columns="2">
+                                        <f:selectItem itemLabel=" Sim" 
+                                                      itemValue="Sim" />
+                                        <f:selectItem itemLabel=" Não se aplica" 
+                                                      itemValue="Não" />
+                                    </p:selectOneRadio>
+
+                                    <h:outputText value="Prevenção de Enventos Críticos"
+                                                  styleClass="fichaFont"
+                                                  style="font-weight: bold;"/>                        
+                                    <br/>
+                                    <h:outputText value="Para o Cirurgião:"
+                                                  styleClass="fichaFont"
+                                                  style="color: #00975C;"/>
+                                    <br/>
+                                    <h:outputText value="Quais são as etapas críticas ou inesperadas?"
+                                                  styleClass="fichaFont"/>
+                                    <br/>
+                                    <h:inputText value="#{formularioMB.formulario.etapasCriticas}"
+                                                 styleClass="caixaTexto"/>
+                                    <br/>
+                                    <h:outputText value="Qual a duração da operação?"
+                                                  styleClass="fichaFont"/>
+                                    <br/>
+                                    <h:inputText value="#{formularioMB.formulario.duracaoOperacao}"
+                                                 styleClass="caixaTexto"/>
+                                    <br/>
+                                    <h:outputText value="Qual a quantidade de perda sanguínea prevista?"
+                                                  styleClass="fichaFont"/>
+                                    <br/>
+                                    <h:inputText value="#{formularioMB.formulario.perdaSanguineaPrevista}"
+                                                 styleClass="caixaTexto"/>
+                                    <br/>
+                                    <h:outputText value="Para o Anestesiologista:"
+                                                  styleClass="fichaFont"
+                                                  style="color: #00975C;"/>
+                                    <br/>
+                                    <h:outputText value="Há alguma preocupação especificamente relacionada ao paciente?"
+                                                  styleClass="fichaFont"/>
+                                    <br/>
+                                    <h:inputText value="#{formularioMB.formulario.preocupacaoEspecificaAnestesiologista}"
+                                                 styleClass="caixaTexto"/>
+                                    <br/>
+                                    <h:outputText value="Para a Equipe de Enfermagem:"
+                                                  styleClass="fichaFont"
+                                                  style="color: #00975C;"/>
+                                    <br/>
+                                    <h:outputText value="Foi confirmada a esterilização (incluindo os resultados dos indicadores)?"
+                                                  styleClass="fichaFont"/>
+                                    <br/>
+                                    <p:selectOneRadio value="#{formularioMB.formulario.esterilizacaoConfirmada}" 
+                                                      styleClass="fichaFont"
+                                                      columns="2">
+                                        <f:selectItem itemLabel=" Sim" 
+                                                      itemValue="Sim" />
+                                        <f:selectItem itemLabel=" Não" 
+                                                      itemValue="Não" />
+                                    </p:selectOneRadio>
+                                    <br/>
+                                    <h:outputText value="Há alguma preocupação ou problema com relação aos equipamentos?"
+                                                  styleClass="fichaFont"/>
+                                    <br/>
+
+                                    <p:selectOneRadio value="#{formularioMB.formulario.preocupacaoEquipamentos}" 
+                                                      styleClass="fichaFont"
+                                                      columns="2">
+                                        <f:selectItem itemLabel=" Sim" 
+                                                      itemValue="Sim" />
+                                        <f:selectItem itemLabel=" Não" 
+                                                      itemValue="Não" />
+                                    </p:selectOneRadio>
+
+                                    <h:outputText value="As imagens essenciais estão visíveis?"
+                                                  styleClass="fichaFont"
+                                                  style="font-weight: bold;"/>                        
+                                    <br/>
+                                    <p:selectOneRadio value="#{formularioMB.formulario.imagensEssenciaisVisiveis}" 
+                                                      styleClass="fichaFont"
+                                                      columns="2">
+                                        <f:selectItem itemLabel=" Sim" 
+                                                      itemValue="Sim" />
+                                        <f:selectItem itemLabel=" Não se aplica" 
+                                                      itemValue="Não" />
+                                    </p:selectOneRadio>
+
+                                </div>
+                        </center>
+                    </div>
+
+                    <!-- Conteúdo Fomulário -->
+                    <div style="width: 400px; margin: 10px;">
+                        <center>
+                            <div style="margin: 20px 0;">
+                                <h:outputText value="Antes da Saída do Paciente da Sala Cirúrgica"
+                                              styleClass="tituloFont"/>
+                            </div>
+                            <div style=" margin: 10px 0;">
+                                <h:outputText value="A equipe de enfermagem confirma verbalmente"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>
+                                <br/>
+                                <h:outputText value="O nome do procedimento"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C; width: 70%; height: auto;"/>
+                                <br/>
+                                <h:inputText value="#{formularioMB.formulario.confirmouNomeProcedimento}"
+                                             styleClass="caixaTexto"/>
+                                <br/>
+                                <h:outputText value="A conclusão da contagem de instrumentos, compressas e agulhas"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>
+                                <br/>
+                                <h:inputText value="#{formularioMB.formulario.conclusaoContagemEquipamentos}"
+                                             styleClass="caixaTexto"/>
+                                <br/>
+                                <h:outputText value="A identificação das amostras (ler os rótulos das amostras em voz alta, inclusive o nome do paciente)"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>                        
+                                <br/>
+                                <h:inputText value="#{formularioMB.formulario.identificacaoAmostras}"
+                                             styleClass="caixaTexto"/>
+                                <br/>
+                                <h:outputText value="Se há quaisquer problemas com os equipamentos a serem resolvidos"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>                        
+                                <br/>
+                                <h:inputText value="#{formularioMB.formulario.haProblemasEquipamentos}"
+                                             styleClass="caixaTexto"/>
+                                <br/>
+                                <h:outputText value="Para o Cirurgião, o Anestesioloista e a Equipe de Enfermagem:"
+                                              styleClass="fichaFont"
+                                              style="font-weight: bold;"/>
+                                <br/>
+                                <h:outputText value="Quais são as principais preocupações para a recuperação e o manejo do paciente"
+                                              styleClass="fichaFont"
+                                              style="color: #00975C;"/>  
+                                <br/>
+                                <h:inputText value="#{formularioMB.formulario.principaisPreocupacoesRecuperacaoEManejoPaciente}"
+                                             styleClass="caixaTexto"/>
+                            </div>
+                        </center>
+                    </div>
+
+                </div>
+
+                <br/>
+                <br/>
 
                 <p:commandButton value="Cancelar" 
                                  styleClass="botaoCinza"

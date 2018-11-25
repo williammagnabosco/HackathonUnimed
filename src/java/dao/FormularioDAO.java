@@ -19,7 +19,7 @@ public class FormularioDAO implements IFormularioDAO {
     public void salvarFormulario(Formulario formulario) {
         try {
             Connection con = new Conexao().conectar();
-            String sql = "insert into formulario(confirmou_identidade, sitio_demarcado"
+            String sql = "insert into formulario(confirmou_identidade, sitio_demarcado,"
                     + " verificacao_equipamento_anest_med, oximetro_funcionando, alergia_conhecida, "
                     + "complicacao_via_aerea, risco_perda_sanguinea, membros_se_apresentaram, "
                     + "confirmar_nome_procedimento_local, profilaxia_antibiotica, cirurgiao_etapas_criticas, "

@@ -297,28 +297,28 @@
                                           styleClass="fichaFont"
                                           style="color: #00975C; width: 70%; height: auto;"/>
                             <br/>
-                            <h:inputText value="#{formularioMB.formulario}"
+                            <h:inputText value="#{formularioMB.formulario.confirmouNomeProcedimento}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="A conclusão da contagem de instrumentos, compressas e agulhas"
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.conclusaoContagemEquipamentos}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="A identificação das amostras (ler os rótulos das amostras em voz alta, inclusive o nome do paciente)"
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>                        
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.identificacaoAmostras}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Se há quaisquer problemas com os equipamentos a serem resolvidos"
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>                        
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.haProblemasEquipamentos}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Para o Cirurgião, o Anestesioloista e a Equipe de Enfermagem:"
@@ -329,7 +329,7 @@
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>  
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.principaisPreocupacoesRecuperacaoEManejoPaciente}"
                                          styleClass="caixaTexto"/>
                         </div>
                     </center>
@@ -338,7 +338,10 @@
             </div>
             
             <p:commandButton value="Concluir" 
-                             styleClass="botaoLaranja"/>
+                             styleClass="botaoLaranja"
+                             actionListener="#{formularioMB.salvar()}"
+                             ajax="false"
+                             immediate="true"/>
 
         </h:form>
 

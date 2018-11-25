@@ -1,5 +1,7 @@
 package beans;
 
+import dao.FormularioDAO;
+import dao.IFormularioDAO;
 import javax.faces.bean.ManagedBean;
 import modelo.Formulario;
 
@@ -17,7 +19,12 @@ public class FormularioMB {
         formulario = new Formulario();
     }
     
-    
+    public String salvar(){
+        
+        IFormularioDAO formularioDAO = new FormularioDAO();
+        formularioDAO.salvarFormulario(formulario);
+        return "index";
+    }
 
     public Formulario getFormulario() {
         return formulario;

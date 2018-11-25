@@ -41,7 +41,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                            <p:selectBooleanButton value="#{formularioMB.formulario.confirmouIdentidade}" 
                                                    onLabel="Sim" 
                                                    offLabel="Não"
                                                    styleClass="selectBoolean"/>
@@ -52,7 +52,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.sitioDemarcado}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Sim" 
@@ -67,7 +67,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                            <p:selectBooleanButton value="#{formularioMB.formulario.verificacaoEquipamentoAnestEMed}" 
                                                    onLabel="Sim" 
                                                    offLabel="Não"
                                                    styleClass="selectBoolean"/>
@@ -78,7 +78,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                            <p:selectBooleanButton value="#{formularioMB.formulario.oximetroFuncionando}" 
                                                    onLabel="Sim" 
                                                    offLabel="Não"
                                                    styleClass="selectBoolean"/>
@@ -93,7 +93,7 @@
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.alergiaConhecida}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Não" 
@@ -106,7 +106,7 @@
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.complicacaoViaAerea}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Não" 
@@ -119,7 +119,7 @@
                                           styleClass="fichaFont"
                                           style="color: #00975C;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.riscoPerdaSanguinea}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Não" 
@@ -146,7 +146,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                            <p:selectBooleanButton value="#{formularioMB.formulario.membrosSeAPresentaram}" 
                                                    onLabel="Confirmado" 
                                                    offLabel="Não confirmado"
                                                    styleClass="selectBoolean"/>
@@ -157,7 +157,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                            <p:selectBooleanButton value="#{formularioMB.formulario.confirmouNomeProcedimentoELocal}" 
                                                    onLabel="Confirmado" 
                                                    offLabel="Não confirmado"
                                                    styleClass="selectBoolean"/>
@@ -168,7 +168,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.profilaxiaAntibiotica}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Sim" 
@@ -190,19 +190,19 @@
                             <h:outputText value="Quais são as etapas críticas ou inesperadas?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.etapasCriticas}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Qual a duração da operação?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.duracaoOperacao}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Qual a quantidade de perda sanguínea prevista?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.perdaSanguineaPrevista}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Para o Anestesiologista:"
@@ -212,7 +212,7 @@
                             <h:outputText value="Há alguma preocupação especificamente relacionada ao paciente?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.preocupacaoEspecificaAnestesiologista}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Para a Equipe de Enfermagem:"
@@ -222,13 +222,13 @@
                             <h:outputText value="Foi confirmada a esterilização (incluindo os resultados dos indicadores)?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.esterilizacaoConfirmada}"
                                          styleClass="caixaTexto"/>
                             <br/>
                             <h:outputText value="Há alguma preocupação ou problema com relação aos equipamentos?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario.preocupacaoEquipamentos}"
                                          styleClass="caixaTexto"/>
 
                             <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
@@ -237,7 +237,7 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.profilaxiaAntibiotica}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Sim" 
@@ -268,7 +268,7 @@
                                           styleClass="fichaFont"
                                           style="color: #00975C; width: 70%; height: auto;"/>                        
                             <br/>
-                            <h:inputText value=""
+                            <h:inputText value="#{formularioMB.formulario}"
                                          styleClass="caixaTexto"/>
 
                             <h:outputText value="Para o Cirurgião, o Anestesiologista e a Equipe de Enfermagem"

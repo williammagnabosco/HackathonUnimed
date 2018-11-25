@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
 
         <title>Formulário</title>
@@ -15,23 +17,50 @@
         <h:form>
 
             <div id="barraMenu">
-                <img src="img/LogoUnimed.jpeg" 
-                     width="100" 
-                     height="100"/>
+                <img src="imagens/LogoUnimed.png" 
+                     width="130" 
+                     height="70"
+                     style="float: left;"/>
             </div>
-            
+
             <!-- Conteúdo Tela -->
-            <div style="background-color: white; margin: 10px; display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                
-                <!-- Conteúdo Tela -->
-                <div style="margin: 20px;">
-                    <div id="tituloForm">
-                        <h:outputText value="Antes da Indução Anestésica"
-                                      styleClass="tituloFont"/>
-                    </div>
-                    <div id="fichaForm">
-                        opa
-                    </div>
+            <div style="width: 100%; background-color: white; margin: 10px 0; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+
+                <!-- Conteúdo caixa fomulário -->
+                <div style="width: 30%; margin: 10px;">
+                    <center>
+                        <div id="tituloForm"
+                             style="margin: 20px 0;">
+                            <h:outputText value="Antes da Indução Anestésica"
+                                          styleClass="tituloFont"/>
+                        </div>
+                        <div id="fichaForm"
+                             style=" margin: 10px 0;">
+                            <h:outputText value="O paciente confirmou a sua identidade, o
+                                          local, o procedimento e seu consentimento?"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectBooleanButton id="value1" 
+                                                   value="#{selectBooleanView.value1}" 
+                                                   onLabel="Sim" 
+                                                   offLabel="Não"
+                                                   styleClass="selectBoolean"
+                                                   style="width:60px" />
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                                              styleClass="fichaFont"
+                                              columns="3"
+                                              style="width: 100%;">
+                                <f:selectItem itemLabel=" Op1" 
+                                              itemValue="op3" />
+                                <f:selectItem itemLabel=" Op2" 
+                                              itemValue="op2" />
+                                <f:selectItem itemLabel=" Op3" 
+                                              itemValue="op3" />
+                            </p:selectOneRadio>
+                        </div>
+                    </center>
                 </div>
 
             </div>

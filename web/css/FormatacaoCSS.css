@@ -4,48 +4,66 @@ body{
     margin: 0;  	
     padding: 0;
     text-align: center;
-    background-color: #E9E9E9;
+    background-color: #DEDEDE;
 }
 
 
 #barraMenu{
-    height: 60px;
+    height: 65px;
     width: 100%;
     background-image: linear-gradient(to right, #00975C, #008752);
 }
 
 .tituloFont{
+    width: 100%;
+    
     color: white;
     font-size: 17pt;
-    font-weight: 100;
+    font-weight: 500;
     font-family: calibri, sans-serif;
 }
 
 #tituloForm{
-    height: 100px;
-    width: 200px;
-    border-radius: 30px;
+    width: 80%;
     background-color: #FF7407;
     margin: 5px;
-    padding: 0px;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
 }
 
 .fichaFont{
-    color: white;
-    font-size: 17pt;
-    font-weight: 400;
+    color: black;
+    font-size: 12pt;
+    font-weight: 100;
     font-family: calibri, sans-serif;
 }
 
 #fichaForm{
-    
-    width: 30%;
-    
+
+    width: 100%;
+
     padding: 5px;
     margin: 5px;
-    
+
     border-style: solid;
     border-width: 1px;
-    border-radius: 30px;
+    border-radius: 20px;
     border-color: #00975C;
+}
+
+.selectBoolean{
+    margin: 10px;
+    color: white;
+    font-size: 12pt;
+    font-weight: 100;
+    font-family: calibri, sans-serif;
+
+    background-image: linear-gradient(to right, #00975C, #00975C);
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: #00975C;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }

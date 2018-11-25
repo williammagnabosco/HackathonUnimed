@@ -262,11 +262,11 @@
                                               itemValue="Não" />
                             </p:selectOneRadio>
 
-                            <h:outputText value="A profilaxia antibiótica foi administrada nos últimos 60 minutos?"
+                            <h:outputText value="As imagens essenciais estão visíveis?"
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectOneRadio value="#{formularioMB.formulario.profilaxiaAntibiotica}" 
+                            <p:selectOneRadio value="#{formularioMB.formulario.imagensEssenciaisVisiveis}" 
                                               styleClass="fichaFont"
                                               columns="2">
                                 <f:selectItem itemLabel=" Sim" 
@@ -340,8 +340,7 @@
             <p:commandButton value="Concluir" 
                              styleClass="botaoLaranja"
                              actionListener="#{formularioMB.salvar()}"
-                             ajax="false"
-                             immediate="true"/>
+                             ajax="false"/>
 
         </h:form>
 

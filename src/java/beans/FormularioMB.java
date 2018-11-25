@@ -3,6 +3,7 @@ package beans;
 import dao.FormularioDAO;
 import dao.IFormularioDAO;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import modelo.Formulario;
 
 /**
@@ -11,6 +12,7 @@ import modelo.Formulario;
  */
 
 @ManagedBean
+@SessionScoped
 public class FormularioMB {
     
     private Formulario formulario;

@@ -87,6 +87,25 @@ body{
     font-family: calibri, sans-serif;
 }
 
+.botaoLaranja{
+    margin: 20px;
+    
+    color: #FF7407;
+    font-size: 15pt;
+    font-weight: 100;
+    font-family: calibri, sans-serif;
+    background-image: linear-gradient(to right, #DEDEDE, #DEDEDE);
+    
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #FF7407;
+    border-width: 1px;
+}
+.botaoLaranja:hover{
+    background-image: linear-gradient(to right, #FF7407, #FF7407);
+    color: white;
+}
+
 .ui-datalist ul {
     padding: 0px 10px 0 20px;
     margin: 5px 0;
@@ -98,4 +117,16 @@ body{
 
 .ui-noborder tr.ui-widget-content {
     background: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
 }

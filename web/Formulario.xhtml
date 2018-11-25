@@ -27,7 +27,7 @@
             <div style="width: 100%; background-color: white; margin: 10px 0; display: flex; flex-direction: row; justify-content: center; ">
 
                 <!-- Conteúdo Fomulário -->
-                <div style="width: 30%; margin: 10px;">
+                <div style="width: 400px; margin: 10px;">
                     <center>
                         <div id="tituloForm"
                              style="margin: 20px 0;">
@@ -41,10 +41,14 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{formularioMB.formulario.confirmouIdentidade}" 
-                                                   onLabel="Sim" 
-                                                   offLabel="Não"
-                                                   styleClass="selectBoolean"/>
+                            <p:selectOneRadio value="#{formularioMB.formulario.confirmouIdentidade}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
 
                             <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
 
@@ -67,10 +71,14 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{formularioMB.formulario.verificacaoEquipamentoAnestEMed}" 
-                                                   onLabel="Sim" 
-                                                   offLabel="Não"
-                                                   styleClass="selectBoolean"/>
+                            <p:selectOneRadio value="#{formularioMB.formulario.verificacaoEquipamentoAnestEMed}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
 
                             <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
 
@@ -78,10 +86,15 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{formularioMB.formulario.oximetroFuncionando}" 
-                                                   onLabel="Sim" 
-                                                   offLabel="Não"
-                                                   styleClass="selectBoolean"/>
+                            
+                            <p:selectOneRadio value="#{formularioMB.formulario.oximetroFuncionando}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
 
                             <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
 
@@ -121,11 +134,13 @@
                             <br/>
                             <p:selectOneRadio value="#{formularioMB.formulario.riscoPerdaSanguinea}" 
                                               styleClass="fichaFont"
-                                              columns="2">
+                                              style="width: 200px;"
+                                              layout="grid" 
+                                              columns="1">
                                 <f:selectItem itemLabel=" Não" 
                                               itemValue="Não" />
                                 <f:selectItem itemLabel=" Sim, e 2 acessos IV periféricos ou 1 cateter venoso central e fluidos previstos" 
-                                              itemValue="Sim" />
+                                              itemValue="Sim"/>
                             </p:selectOneRadio>
 
                         </div>
@@ -133,7 +148,7 @@
                 </div>
 
                 <!-- Conteúdo Fomulário -->
-                <div style="width: 30%; margin: 10px;">
+                <div style="width: 400px; margin: 10px;">
                     <center>
                         <div id="tituloForm"
                              style="margin: 20px 0;">
@@ -146,23 +161,28 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{formularioMB.formulario.membrosSeAPresentaram}" 
-                                                   onLabel="Confirmado" 
-                                                   offLabel="Não confirmado"
-                                                   styleClass="selectBoolean"/>
-
-                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+                            <p:selectOneRadio value="#{formularioMB.formulario.membrosSeAPresentaram}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
 
                             <h:outputText value="Confirmar o nome do paciente o procedimento cirúrgico e onde será realizada a incisão."
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton value="#{formularioMB.formulario.confirmouNomeProcedimentoELocal}" 
-                                                   onLabel="Confirmado" 
-                                                   offLabel="Não confirmado"
-                                                   styleClass="selectBoolean"/>
-
-                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+                            
+                            <p:selectOneRadio value="#{formularioMB.formulario.confirmouNomeProcedimentoELocal}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Confirmado" 
+                                              itemValue="Confirmado" />
+                                <f:selectItem itemLabel=" Não confirmado" 
+                                              itemValue="NaoConfirmado" />
+                            </p:selectOneRadio>
 
                             <h:outputText value="A profilaxia antibiótica foi administrada nos últimos 60 minutos?"
                                           styleClass="fichaFont"
@@ -176,8 +196,6 @@
                                 <f:selectItem itemLabel=" Não se aplica" 
                                               itemValue="Não" />
                             </p:selectOneRadio>
-
-                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
 
                             <h:outputText value="Prevenção de Enventos Críticos"
                                           styleClass="fichaFont"
@@ -222,16 +240,27 @@
                             <h:outputText value="Foi confirmada a esterilização (incluindo os resultados dos indicadores)?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value="#{formularioMB.formulario.esterilizacaoConfirmada}"
-                                         styleClass="caixaTexto"/>
+                            <p:selectOneRadio value="#{formularioMB.formulario.esterilizacaoConfirmada}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                            </p:selectOneRadio>
                             <br/>
                             <h:outputText value="Há alguma preocupação ou problema com relação aos equipamentos?"
                                           styleClass="fichaFont"/>
                             <br/>
-                            <h:inputText value="#{formularioMB.formulario.preocupacaoEquipamentos}"
-                                         styleClass="caixaTexto"/>
-
-                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+                            
+                            <p:selectOneRadio value="#{formularioMB.formulario.preocupacaoEquipamentos}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                            </p:selectOneRadio>
 
                             <h:outputText value="A profilaxia antibiótica foi administrada nos últimos 60 minutos?"
                                           styleClass="fichaFont"
@@ -251,7 +280,7 @@
                 </div>
 
                 <!-- Conteúdo Fomulário -->
-                <div style="width: 30%; margin: 10px;">
+                <div style="width: 400px; margin: 10px;">
                     <center>
                         <div id="tituloForm"
                              style="margin: 20px 0;">
@@ -307,6 +336,9 @@
                 </div>
 
             </div>
+            
+            <p:commandButton value="Concluir" 
+                             styleClass="botaoLaranja"/>
 
         </h:form>
 

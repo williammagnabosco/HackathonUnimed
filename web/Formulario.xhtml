@@ -24,9 +24,9 @@
             </div>
 
             <!-- Conteúdo Tela -->
-            <div style="width: 100%; background-color: white; margin: 10px 0; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <div style="width: 100%; background-color: white; margin: 10px 0; display: flex; flex-direction: row; justify-content: center; ">
 
-                <!-- Conteúdo caixa fomulário -->
+                <!-- Conteúdo Fomulário -->
                 <div style="width: 30%; margin: 10px;">
                     <center>
                         <div id="tituloForm"
@@ -41,24 +41,247 @@
                                           styleClass="fichaFont"
                                           style="font-weight: bold;"/>                        
                             <br/>
-                            <p:selectBooleanButton id="value1" 
-                                                   value="#{selectBooleanView.value1}" 
+                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
                                                    onLabel="Sim" 
                                                    offLabel="Não"
-                                                   styleClass="selectBoolean"
-                                                   style="width:60px" />
+                                                   styleClass="selectBoolean"/>
+
                             <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="O sítio está demarcado?"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
                             <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
                                               styleClass="fichaFont"
-                                              columns="3"
-                                              style="width: 100%;">
-                                <f:selectItem itemLabel=" Op1" 
-                                              itemValue="op3" />
-                                <f:selectItem itemLabel=" Op2" 
-                                              itemValue="op2" />
-                                <f:selectItem itemLabel=" Op3" 
-                                              itemValue="op3" />
+                                              columns="2">
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                                <f:selectItem itemLabel=" Não se aplica" 
+                                              itemValue="Não" />
                             </p:selectOneRadio>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="Foi concluída a verificação do equipamento de anestesiologia e da medicação?"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                                                   onLabel="Sim" 
+                                                   offLabel="Não"
+                                                   styleClass="selectBoolean"/>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="O oxímetro de pulso está aplicado no paciente e funcionando corretamente?"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                                                   onLabel="Sim" 
+                                                   offLabel="Não"
+                                                   styleClass="selectBoolean"/>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="O paciente possui:"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>
+                            <br/>
+                            <h:outputText value="Alergia conhecida?"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C;"/>                        
+                            <br/>
+                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
+                            <br/>
+                            <h:outputText value="Complicações nas vias aéreas ou risco de aspiração?"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C;"/>                        
+                            <br/>
+                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim, e equipamentos/assistência disponíveis" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
+                            <br/>
+                            <h:outputText value="Risco de perda sanguínea > 50 mL (7 mL/kg em criaças)?"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C;"/>                        
+                            <br/>
+                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Não" 
+                                              itemValue="Não" />
+                                <f:selectItem itemLabel=" Sim, e 2 acessos IV periféricos ou 1 cateter venoso central e fluidos previstos" 
+                                              itemValue="Sim" />
+                            </p:selectOneRadio>
+
+                        </div>
+                    </center>
+                </div>
+
+                <!-- Conteúdo Fomulário -->
+                <div style="width: 30%; margin: 10px;">
+                    <center>
+                        <div id="tituloForm"
+                             style="margin: 20px 0;">
+                            <h:outputText value="Antes da Incisão Cirurgica"
+                                          styleClass="tituloFont"/>
+                        </div>
+                        <div id="fichaForm"
+                             style=" margin: 10px 0;">
+                            <h:outputText value="Confirmar que todos os membros se apresentaram, indicando seu nome e sua função."
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                                                   onLabel="Confirmado" 
+                                                   offLabel="Não confirmado"
+                                                   styleClass="selectBoolean"/>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="Confirmar o nome do paciente o procedimento cirúrgico e onde será realizada a incisão."
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectBooleanButton value="#{selectBooleanView.value1}" 
+                                                   onLabel="Confirmado" 
+                                                   offLabel="Não confirmado"
+                                                   styleClass="selectBoolean"/>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="A profilaxia antibiótica foi administrada nos últimos 60 minutos?"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                                <f:selectItem itemLabel=" Não se aplica" 
+                                              itemValue="Não" />
+                            </p:selectOneRadio>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="Prevenção de Enventos Críticos"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <h:outputText value="Para o Cirurgião:"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C;"/>
+                            <br/>
+                            <h:outputText value="Quais são as etapas críticas ou inesperadas?"
+                                          styleClass="fichaFont"/>
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+                            <br/>
+                            <h:outputText value="Qual a duração da operação?"
+                                          styleClass="fichaFont"/>
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+                            <br/>
+                            <h:outputText value="Qual a quantidade de perda sanguínea prevista?"
+                                          styleClass="fichaFont"/>
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+                            <br/>
+                            <h:outputText value="Para o Anestesiologista:"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C;"/>
+                            <br/>
+                            <h:outputText value="Há alguma preocupação especificamente relacionada ao paciente?"
+                                          styleClass="fichaFont"/>
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+                            <br/>
+                            <h:outputText value="Para a Equipe de Enfermagem:"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C;"/>
+                            <br/>
+                            <h:outputText value="Foi confirmada a esterilização (incluindo os resultados dos indicadores)?"
+                                          styleClass="fichaFont"/>
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+                            <br/>
+                            <h:outputText value="Há alguma preocupação ou problema com relação aos equipamentos?"
+                                          styleClass="fichaFont"/>
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+
+                            <hr size="1px" style="width: 100%; margin: 2px; float: bottom; opacity: "/>
+
+                            <h:outputText value="A profilaxia antibiótica foi administrada nos últimos 60 minutos?"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>                        
+                            <br/>
+                            <p:selectOneRadio value="#{professorMB.professor.regimeTrabalho}" 
+                                              styleClass="fichaFont"
+                                              columns="2">
+                                <f:selectItem itemLabel=" Sim" 
+                                              itemValue="Sim" />
+                                <f:selectItem itemLabel=" Não se aplica" 
+                                              itemValue="Não" />
+                            </p:selectOneRadio>
+
+                        </div>
+                    </center>
+                </div>
+
+                <!-- Conteúdo Fomulário -->
+                <div style="width: 30%; margin: 10px;">
+                    <center>
+                        <div id="tituloForm"
+                             style="margin: 20px 0;">
+                            <h:outputText value="Antes da Saída do Paciente da Sala Cirúrgica"
+                                          styleClass="tituloFont"/>
+                        </div>
+                        <div id="fichaForm"
+                             style=" margin: 10px 0;">
+                            <h:outputText value="A equipe de enfermagem confirma verbalmente"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>
+                            <br/>
+                            <h:outputText value="Quais são as principais preocupações para a recuperação e o manejo do paciente"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C; width: 70%; height: auto;"/>                        
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+
+                            <h:outputText value="Para o Cirurgião, o Anestesiologista e a Equipe de Enfermagem"
+                                          styleClass="fichaFont"
+                                          style="font-weight: bold;"/>
+                            <br/>
+                            <h:outputText value="Quais são as principais preocupações para a recuperação e o manejo do paciente"
+                                          styleClass="fichaFont"
+                                          style="color: #00975C; width: 70%; height: auto;"/>                        
+                            <br/>
+                            <h:inputText value=""
+                                         styleClass="caixaTexto"/>
+
                         </div>
                     </center>
                 </div>

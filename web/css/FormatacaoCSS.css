@@ -16,20 +16,23 @@ body{
 
 .tituloFont{
     width: 100%;
-    
-    color: white;
+
+    color: #FF7407;
     font-size: 17pt;
-    font-weight: 500;
+    font-weight: 900;
     font-family: calibri, sans-serif;
 }
 
 #tituloForm{
     width: 80%;
-    background-color: #FF7407;
+    background-color: white;
     margin: 5px;
     padding: 5px;
     display: flex;
+
     border-radius: 5px;
+    border-bottom-style: double;
+    border-color: #FF7407;
 }
 
 .fichaFont{
@@ -66,4 +69,33 @@ body{
     border-radius: 20px;
     border-color: #00975C;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+.caixaTexto{
+    margin: 15px;
+    padding: 5px;
+    color: black;
+    
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00975C;
+    
+    text-align: center;
+    font-size: 12pt;
+    font-weight: 100;
+    font-family: calibri, sans-serif;
+}
+
+.ui-datalist ul {
+    padding: 0px 10px 0 20px;
+    margin: 5px 0;
+}
+
+.ui-datalist {
+    margin-bottom: 10px
+}
+
+.ui-noborder tr.ui-widget-content {
+    background: none;
 }
